@@ -31,9 +31,9 @@ function App() {
       setSelectedStarship(selectedShip)
   }
 
-  // getShipPicture(()=> {
-  //   fetch
-  // })
+  function myPopupFunction() {
+    alert('Congratulations and thank you for your credits!')
+  }
 
   if(starShipList.length === 0){
     console.log('Please wait')
@@ -62,7 +62,7 @@ function App() {
         <h3>Cargo Capacity: {`${selectedStarship.cargo_capacity}`}</h3>
         <h3>Max Atmospheric Speed: {`${selectedStarship.max_atmosphering_speed}`}</h3>
         <h3>Hyperdrive Rating: {`${selectedStarship.hyperdrive_rating}`}</h3>
-        <button className="button" alert="Congratulations and thank you for your credits!">Purchase</button>
+        <button onClick={myPopupFunction} className="button">Purchase</button>
       </div>
        ) : ( <p>Please choose a valid option</p>
     )}
